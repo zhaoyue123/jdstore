@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'products#index'
-    resources :products do
+  resources :products do
     member do
       post :add_to_cart
     end
@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :products
   end
-  resources :carts
+  resources :carts do
+    collection do
+      delete :clean
+    end
+  end
 end

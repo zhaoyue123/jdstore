@@ -53,6 +53,8 @@ class ProductsController < ApplicationController
     redirect_to :back
   end
 
+
+
   private
 
   def product_params
