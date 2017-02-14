@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20170214094118) do
     t.datetime "updated_at",                       null: false
     t.string   "token"
     t.boolean  "id_paid",          default: false
+    t.boolean  "is_paid",          default: false
     t.string   "payment_method"
   end
 
